@@ -1,3 +1,24 @@
+# CRM FORMULA
+
+Go Project to execute salesforce formulas
+
+- [Dependency 1](github.com/gorilla/mux)
+
+```bash
+# Clone the repository
+git clone https://github.com/ismailSf-rgb/crmformula.git
+
+# Navigate to the project directory
+cd crmformula
+
+# Install dependencies
+go mod tidy
+
+#execute
+
+go run main.go
+
+#details
 kind of formulas to use 
 
 POST http://localhost:8000/formulas
@@ -5,6 +26,11 @@ POST http://localhost:8000/formulas
 body: 
 
 {"rawFormula": "AND(EQUAL(LOWER(\"abA?\"),\"aba?\"), EQUAL(UPPER(\"abA?\"),\"ABB?\"))", "timeZone":"UTC", "fieldValue": {"city": "Casablanca", "country": "Maroc"}}
+
+or
+
+{"rawFormula":  "IF(3.0 = number,country, city)", "timeZone":"UTC", "fieldValue": {"city": "Casablanca", "country": "Maroc"}}
+
 
 to get all operators
 GET http://localhost:8000/operators
