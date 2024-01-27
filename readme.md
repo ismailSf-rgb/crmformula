@@ -2,7 +2,7 @@
 
 Go Project to execute salesforce formulas
 
-- [Dependency 1](github.com/gorilla/mux)
+- [mux dependency](github.com/gorilla/mux)
 
 ```bash
 # Clone the repository
